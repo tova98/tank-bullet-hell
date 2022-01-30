@@ -1,0 +1,152 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/tank/border.png" type="Texture" id=1]
+[ext_resource path="res://assets/tank/border_selected.png" type="Texture" id=2]
+[ext_resource path="res://assets/tank/Shotgun_Shells.png" type="Texture" id=3]
+[ext_resource path="res://assets/tank/Medium_Shell.png" type="Texture" id=4]
+[ext_resource path="res://assets/tank/Plasma.png" type="Texture" id=5]
+[ext_resource path="res://assets/tank/Light_Shell.png" type="Texture" id=6]
+[ext_resource path="res://scripts/GUIShells.gd" type="Script" id=7]
+
+[node name="Shells" type="MarginContainer"]
+margin_left = 20.0
+margin_top = 100.0
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShellContainer" type="VBoxContainer" parent="."]
+margin_right = 128.0
+margin_bottom = 128.0
+
+[node name="LightShell" type="MarginContainer" parent="ShellContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+
+[node name="TextureRect" type="TextureRect" parent="ShellContainer/LightShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 6 )
+
+[node name="Border" type="TextureRect" parent="ShellContainer/LightShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 1 )
+
+[node name="Selected" type="TextureRect" parent="ShellContainer/LightShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+
+[node name="Type" type="RichTextLabel" parent="ShellContainer/LightShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+text = "			
+			
+			
+			
+			
+			
+			Light"
+
+[node name="MediumShell" type="MarginContainer" parent="ShellContainer"]
+visible = false
+margin_top = 132.0
+margin_right = 128.0
+margin_bottom = 260.0
+
+[node name="TextureRect" type="TextureRect" parent="ShellContainer/MediumShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 4 )
+
+[node name="Border" type="TextureRect" parent="ShellContainer/MediumShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 1 )
+
+[node name="Selected" type="TextureRect" parent="ShellContainer/MediumShell"]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+
+[node name="Type" type="RichTextLabel" parent="ShellContainer/MediumShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+text = "			
+			
+			
+			
+			
+			
+		  Medium"
+
+[node name="ShotgunShell" type="MarginContainer" parent="ShellContainer"]
+visible = false
+margin_top = 264.0
+margin_right = 128.0
+margin_bottom = 392.0
+
+[node name="TextureRect" type="TextureRect" parent="ShellContainer/ShotgunShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 3 )
+
+[node name="Border" type="TextureRect" parent="ShellContainer/ShotgunShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 1 )
+
+[node name="Selected" type="TextureRect" parent="ShellContainer/ShotgunShell"]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+
+[node name="Type" type="RichTextLabel" parent="ShellContainer/ShotgunShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+text = "			
+			
+			
+			
+			
+			
+		  Shotgun"
+
+[node name="PlasmaShell" type="MarginContainer" parent="ShellContainer"]
+visible = false
+margin_top = 132.0
+margin_right = 128.0
+margin_bottom = 260.0
+
+[node name="TextureRect" type="TextureRect" parent="ShellContainer/PlasmaShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 5 )
+
+[node name="Border" type="TextureRect" parent="ShellContainer/PlasmaShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 1 )
+
+[node name="Selected" type="TextureRect" parent="ShellContainer/PlasmaShell"]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+
+[node name="Type" type="RichTextLabel" parent="ShellContainer/PlasmaShell"]
+margin_right = 128.0
+margin_bottom = 128.0
+text = "			
+			
+			
+			
+			
+			
+		  Plasma"

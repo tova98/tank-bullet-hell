@@ -1,0 +1,30 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/explosions/ExplosionGun01.png" type="Texture" id=1]
+[ext_resource path="res://assets/explosions/ExplosionFire01.png" type="Texture" id=2]
+[ext_resource path="res://assets/explosions/ExplosionFire04.png" type="Texture" id=3]
+[ext_resource path="res://assets/explosions/ExplosionFire05.png" type="Texture" id=4]
+[ext_resource path="res://assets/explosions/ExplosionFire02.png" type="Texture" id=5]
+[ext_resource path="res://assets/explosions/ExplosionGun03.png" type="Texture" id=6]
+[ext_resource path="res://assets/explosions/ExplosionGun04.png" type="Texture" id=7]
+[ext_resource path="res://assets/explosions/ExplosionGun02.png" type="Texture" id=8]
+[ext_resource path="res://assets/explosions/ExplosionGun05.png" type="Texture" id=9]
+[ext_resource path="res://assets/explosions/ExplosionFire03.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "fire",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "gun",
+"speed": 10.0
+} ]
+
+[node name="Explosion" type="AnimatedSprite"]
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "fire"
